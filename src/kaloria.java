@@ -9,10 +9,10 @@
 */
 
 public class kaloria {
-    public double calcKaloriMale(double weight, double height, int age){
+    public double calcKaloriMale(double weight, double height, double age){
         return 13.397*weight+4.799*height-5.667*age+88.362;
     }
-    public double calcKaloriFemale(double weight, double height, int age){
+    public double calcKaloriFemale(double weight, double height, double age){
         return 9.247*weight+3.098*height-4.330*age+447.593;
     }
 }

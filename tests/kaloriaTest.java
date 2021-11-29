@@ -9,27 +9,25 @@
 */
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
+
 
 public class kaloriaTest {
-     Kaloria kaloria;
+     kaloria kaloria;
 
     @BeforeEach
     void setup(){
-        kaloria = new Kaloria();
+        kaloria = new kaloria();
     }
     @Test
     void calcKaloriaMaletest(){
         double weight = 30;
         double height = 30;
         double age = 30;
-        double expectedKalori = 650;
+        double expectedKalori = 464.23199999999997;
 
-        double actualKalori = this.kaloria.calcKalori(weight,height,age);
+        double actualKalori = this.kaloria.calcKaloriMale(weight,height,age);
         assertEquals(expectedKalori,actualKalori);
     }
     @Test
@@ -37,9 +35,9 @@ public class kaloriaTest {
         double weight = 30;
         double height = 30;
         double age = 30;
-        double expectedKalori = 963;
+        double expectedKalori = 688.043;
 
-        double actualKalori = this.Kaloria.calcKalori(weight,height,age);
+        double actualKalori = this.kaloria.calcKaloriFemale(weight,height,age);
         assertEquals(expectedKalori,actualKalori);
     }
     @Test
@@ -47,9 +45,9 @@ public class kaloriaTest {
         double weight = 500;
         double height = 500;
         double age = 500;
-        double expectedKalori = 6237;
+        double expectedKalori = 4455.093;
 
-        double actualKalori = this.Kaloria.calcKalori(weight,height,age);
+        double actualKalori = this.kaloria.calcKaloriFemale(weight,height,age);
         assertEquals(expectedKalori,actualKalori);
     }
     @Test
@@ -57,9 +55,9 @@ public class kaloriaTest {
         double weight = 1;
         double height = 1;
         double age = 1;
-        double expectedKalori = 638;
+        double expectedKalori = 455.608;
 
-        double actualKalori = this.Kaloria.calcKalori(weight,height,age);
+        double actualKalori = this.kaloria.calcKaloriFemale(weight,height,age);
         assertEquals(expectedKalori,actualKalori);
     }
     @Test
@@ -69,7 +67,7 @@ public class kaloriaTest {
         double age = 500;
         double expectedKalori = 8887;
 
-        double actualKalori = this.Kaloria.calcKalori(weight,height,age);
+        double actualKalori = this.kaloria.calcKaloriFemale(weight,height,age);
         assertEquals(expectedKalori,actualKalori);
     }
     @Test
@@ -79,7 +77,7 @@ public class kaloriaTest {
         double age = 1;
         double expectedKalori = 141;
 
-        double actualKalori = this.Kaloria .calcKalori(weight,height,age);
+        double actualKalori = this.kaloria .calcKaloriFemale(weight,height,age);
         assertEquals(expectedKalori, actualKalori, 0.01);
     }
 }
